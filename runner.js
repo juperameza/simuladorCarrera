@@ -1,18 +1,21 @@
 export default class Runner {
     constructor(){
-        this._position=1;
-        this._moves=0;
+        this.position=1;
+       
     }
     move(dice){
         if(dice%2==0){
-            this._position+=2;
+           
+            this.position+=2;
         }
-        else if(dice%3==0){
-            this._position+=1;
+        else if(dice==3 || dice==5){
+            
+            this.position++;
         }
         else{
-            this._position+=3;
+            
+            this.position+=3;
         }
-        this._moves++;        
+            
     }
 }
